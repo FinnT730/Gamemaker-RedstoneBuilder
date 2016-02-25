@@ -14,6 +14,10 @@ ini_write_string("BuildTexture","rgb","0,0,0");
 ini_write_string("BuildTexture","shg","0,0,0,1"); 
 ini_write_string("BuildTexture","builder","true");
 
+for(i = 0; i != 100; i++) {
+ini_write_string("BuildTexture","config",i + 100 * 0.6);
+}
+
 ini_close(); //Closes the current open ini file. Be sure to do this!
 
 ini_open("game_settings.ini"); 

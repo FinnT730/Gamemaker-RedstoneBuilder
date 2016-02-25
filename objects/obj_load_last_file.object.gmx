@@ -25,7 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_load("Testsave.ini");
+            <string>//game_load("Testsave.ini");
+
+if(file_exists("Testsave.ini")) {
+game_load("Testsave.ini")
+}else if(file_exists("color.cl")){
+game_load("color.cl")
+show_message("The real save file is currupted, we will use now this file, and the real paint file will be overriden with this one.")
+}
 </string>
           </argument>
         </arguments>
@@ -43,5 +50,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>64,32</point>
+    <point>64,64</point>
+  </PhysicsShapePoints>
 </object>
