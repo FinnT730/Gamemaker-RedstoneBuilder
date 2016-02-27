@@ -1,7 +1,6 @@
 game_save("Testsave.ini");
 
 
-
 ini_open("game_settings.ini"); //ini_open(string) where string is the file name (must be *.ini) 
 ini_write_real("Settings","Volume",0.8); //ini_write_real(section,key,value) 
 ini_write_string("Settings","Mute","false"); //ini_write_string(section,key,value) 
@@ -13,10 +12,6 @@ ini_write_string("Colors","Random","editor");
 ini_write_string("BuildTexture","rgb","0,0,0"); 
 ini_write_string("BuildTexture","shg","0,0,0,1"); 
 ini_write_string("BuildTexture","builder","true");
-
-for(i = 0; i != 100; i++) {
-ini_write_string("BuildTexture","config",i + 100 * 0.6);
-}
 
 ini_close(); //Closes the current open ini file. Be sure to do this!
 

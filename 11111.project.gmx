@@ -14,12 +14,22 @@
     <sprite>sprites\NewSavePaint_spr</sprite>
     <sprite>sprites\SAVE_spr</sprite>
     <sprite>sprites\loadButton</sprite>
+    <sprites name="Color">
+      <sprite>sprites\Red</sprite>
+      <sprite>sprites\Blue</sprite>
+      <sprite>sprites\Green</sprite>
+    </sprites>
+    <sprite>sprites\GotoColorSelector_spr</sprite>
+    <sprite>sprites\GoBack_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Render.gml</script>
     <script>scripts\Save.gml</script>
+    <scripts name="Commands">
+      <script>scripts\Entity_Selector.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\MainBasic.shader</shader>
@@ -30,9 +40,17 @@
     <object>objects\obj_Handler</object>
     <object>objects\obj_save</object>
     <object>objects\obj_load_last_file</object>
+    <objects name="Colors">
+      <object>objects\obj_blue</object>
+      <object>objects\obj_red</object>
+      <object>objects\obj_green</object>
+    </objects>
+    <object>objects\GotoColorSelector</object>
+    <object>objects\GoBack</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main</room>
+    <room>rooms\Color_Selector</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
